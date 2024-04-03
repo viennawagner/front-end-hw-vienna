@@ -1,12 +1,12 @@
 ## CS 464P/564: Front End Web Technologies - Homework Repository
 
-In this repository, you will find the starter files for the CS 464P/564: Front End Web Technologies homework assignments.
+In this repository, you will find the starter files for the homework assignments for CS 464P/564: Front End Web Technologies.
 
 ### Homework Assignments
 
 - Homework 1 - Setup and Review
-- Homework 2 - CSS, Bootstrap, and JavaScript
-- Homework 3 - React and Charting Libraries
+- Homework 2 - Bootstrap, and JavaScript
+- Homework 3 - Async JavaScript, Charting Libraries, and React
 
 Check the Canvas classroom for more details on each assignment.
 
