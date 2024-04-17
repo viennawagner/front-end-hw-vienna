@@ -16,7 +16,7 @@ const handleInput = () => {
     let outputElement = document.getElementById("response");
     let responseText;
 
-    //Make sure input is actually a positive number
+    //Determine response to display, error on negative numbers and NaN
     if(input === NaN || input < 0)
         responseText = "Please enter a positive number";
     else if(isPalendrome(input)) 
