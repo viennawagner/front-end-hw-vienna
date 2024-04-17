@@ -1,6 +1,5 @@
 //returns true if the given number is a palendrome, false otherwise
 const isPalendrome = (num) => {
-  console.log(num);
   const original = num.toString();
 
   //reverse string by splitting it into an array and reversing that, then rejoining
