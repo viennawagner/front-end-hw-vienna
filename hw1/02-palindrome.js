@@ -3,6 +3,7 @@ const isPalendrome = (num) => {
   const original = num.toString();
 
   //reverse string by splitting it into an array and reversing that, then rejoining
+  //credit: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
   const reversed = original.split("").reverse().join("");
 
   return reversed === original;
