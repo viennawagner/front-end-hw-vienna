@@ -22,7 +22,7 @@ const handleInput = () => {
     else if(isPalendrome(input)) 
         responseText = "Yes. This is a palendrome!";
     else
-        responseText = "No.Try again.";
+        responseText = "No. Try again.";
 
     outputElement.textContent = responseText;
 }
