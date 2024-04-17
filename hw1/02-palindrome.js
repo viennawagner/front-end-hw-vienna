@@ -1,6 +1,7 @@
 
 //returns true if the given number is a palendrome, false otherwise
 const isPalendrome = (num) => {
+    console.log(num);
     const original = num.toString(); 
 
     //reverse string by splitting it into an array and reversing that, then rejoining
@@ -16,18 +17,18 @@ const handleInput = () => {
     let outputElement = document.getElementById("response");
     let responseText;
 
-    //Determine response to display, error on negative numbers and NaN
-    if(input === NaN || input < 0) {
+    //Determine response to display, error on negative numbers and NaN/empty input
+    if(input === NaN || input === '' || input < 0) {
         responseText = "Please enter a positive number";
-        outputElement.className = "text-danger"
+        outputElement.className = "text-danger";
     }
     else if(isPalendrome(input)) {
         responseText = "Yes. This is a palendrome!";
-        outputElement.className = "text-success"
+        outputElement.className = "text-success";
     }
     else {
         responseText = "No. Try again.";
-        outputElement.className = "text-danger"
+        outputElement.className = "text-danger";
     }
 
     outputElement.textContent = responseText;
