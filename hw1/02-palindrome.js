@@ -19,7 +19,7 @@ const handleInput = () => {
     //Determine response to display, error on negative numbers and NaN
     if(input === NaN || input < 0) {
         responseText = "Please enter a positive number";
-        outputElement.className = "text-warning"
+        outputElement.className = "text-danger"
     }
     else if(isPalendrome(input)) {
         responseText = "Yes. This is a palendrome!";
