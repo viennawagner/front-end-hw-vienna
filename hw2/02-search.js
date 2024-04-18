@@ -1,3 +1,3 @@
 // Add your code here
 
-input.addEventListener('click', handleClick);
+userInput.addEventListener('click', handleClick);

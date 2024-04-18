@@ -3,14 +3,12 @@ const characters = [
     id: 1,
     name: 'Luke Skywalker',
     height: '172',
-    eye_color: 'blue',
     birth_year: '19BBY',
   },
   {
     id: 2,
     name: 'C-3PO',
     height: '167',
-    eye_color: 'yellow',
     birth_year: '112BBY',
   },
   {
