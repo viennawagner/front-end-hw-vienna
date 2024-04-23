@@ -1,3 +1,24 @@
-// Add your code here
+//Return the source word, with html to highlight it if it matches the target word
+const replaceWithHighlightHTML = (source, target) => {
+  return source === target
+    ? `<mark class='bg-warning'>${target}</mark>`
+    : source;
+};
 
-input.addEventListener('keydown', handleKeyDown);
+//Highlight words in the paragraph based on user input
+const handleKeyUp = () => {
+  const input_value = document
+    .getElementById("userInput")
+    .value.trim()
+    .toLowerCase();
+  const search_element = document.getElementById("toSearch");
+  const search_arr = search_element.textContent
+    .toLowerCase()
+    .split(RegExp("\\b"));
+
+  search_element.innerHTML = search_arr
+    .map((word) => replaceWithHighlightHTML(word, input_value))
+    .join("");
+};
+
+document.getElementById("userInput").addEventListener("keyup", handleKeyUp);
