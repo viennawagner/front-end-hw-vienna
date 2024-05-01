@@ -1,7 +1,7 @@
 //Return the source word, with html to highlight it if it matches the target word
 const replaceWithHighlightHTML = (source, target) => {
-  return source === target
-    ? `<mark class='p-0' style='background-color: yellow'>${target}</mark>`
+  return source.toLowerCase() === target
+    ? `<mark class='p-0' style='background-color: yellow'>${source}</mark>`
     : source;
 };
 
@@ -13,7 +13,6 @@ const handleKeyUp = () => {
     .toLowerCase();
   const search_element = document.getElementById("toSearch");
   const search_arr = search_element.textContent
-    .toLowerCase()
     .split(RegExp("\\b"));
 
   search_element.innerHTML = search_arr
