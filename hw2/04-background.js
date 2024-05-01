@@ -39,15 +39,19 @@ const setBackgroundColor = () => {
 
 //Do all bookkeeping needed when button is clicked
 const handleClick = () => {
+  //Max interval to prevent overflow issues
+  const max_interval = 500000000000000;
   if (is_button_start_state) {
     const interval = parseFloat(interval_element.value);
-    if (interval >= 0.5) {
+    if (interval >= 0.5 && interval <= max_interval) {
       interval_id = setInterval(setBackgroundColor, interval * 1000);
       changeButtonState();
       message_element.textContent = "";
     } else if (interval < 0.5 && interval >= 0) {
       message_element.textContent =
         "For your safety, please enter a number >= 0.5";
+    } else if (interval > max_interval) {
+      message_element.textContent = `For technical reasons, please enter a number <= ${max_interval}`;
     } else {
       message_element.textContent = "Please enter a positive number";
     }
