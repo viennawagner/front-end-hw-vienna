@@ -23,26 +23,26 @@
         <br />
         <select name="regStatus" id="regStatus" class="w-100">
           <option value="" class="fw-bold">Choose an Option</option>
-          <option value="registered">Registered</option>
-          <option value="pending">Pending</option>
-          <option value="waitlist">Waitlisted</option>
-          <option value="notRegistered">Not Registered</option>
-          <option value="other">Other</option>
+          <option value="Registered">Registered</option>
+          <option value="Pending">Pending</option>
+          <option value="Waitlisted">Waitlisted</option>
+          <option value="Not Registered">Not Registered</option>
+          <option value="Other">Other</option>
         </select>
         <fieldset>
           <legend class="fw-bold">
             Have you taken any of the following courses?
           </legend>
           <div>
-            <input type="checkbox" id="progLangs" name="progLangs" />
+            <input type="checkbox" id="progLangs" name="progLangs" class="listedClass" value="Programming Languages"/>
             <label for="progLangs">Programming Languages</label>
           </div>
           <div>
-            <input type="checkbox" id="os" name="os" />
+            <input type="checkbox" id="os" name="os" class="listedClass" value="Operating Systems"/>
             <label for="os">Operating Systems</label>
           </div>
           <div>
-            <input type="checkbox" id="fullstack" name="fullstack" />
+            <input type="checkbox" id="fullstack" name="fullstack" class="listedClass" value="Full Stack Web Development"/>
             <label for="fullstack">Full Stack Web Development</label>
           </div>
         </fieldset>
@@ -52,8 +52,8 @@
           type="submit"
           id="submitButton"
           value="Submit"
-          data-toggle="modal"
-          data-target="#responseModal"
+          data-bs-toggle="modal"
+          data-bs-target="#responseModal"
           class="btn btn-primary col-5 m-2"
         />
         <input type="reset" class="btn btn-secondary col-5 m-2" value="Reset" />
@@ -69,21 +69,31 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">Your responses</h5>
+                <h2 class="modal-title" id="modalLabel">Your responses</h5>
                 <button
                   type="button"
-                  class="close"
-                  data-dismiss="modal"
+                  class="btn btn-close"
+                  data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
               </div>
               <div class="modal-body">
-                <p>Modal body (placeholder)</p>
+                <h3>Name:</h3>
+                <p class="nameResponseArea"></p>
+                <h3>Email:</h3>
+                <p class="emailResponseArea"></p>
+                <h3>Registartion status:</h3>
+                <p class="statusResponseArea"></p>
+                <h3>Previous classes:</h3>
+                <p class="classResponseArea" style="white-space: pre-wrap;"></p>
+                <h3>Anything else?</h3>
+                <p class="alsoResponseArea"></p>
               </div>
             </div>
           </div>
         </div>
       </form>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
