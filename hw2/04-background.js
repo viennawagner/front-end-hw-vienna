@@ -14,10 +14,10 @@ const changeButtonState = () => {
   is_button_start_state = !is_button_start_state;
   if (is_button_start_state) {
     button.setAttribute("value", "Start");
-    button.setAttribute("class", "btn-primary");
+    button.setAttribute("class", "btn btn-primary mt-3 rounded");
   } else {
     button.setAttribute("value", "Stop");
-    button.setAttribute("class", "btn-danger");
+    button.setAttribute("class", "btn btn-danger mt-3 rounded");
   }
 };
 

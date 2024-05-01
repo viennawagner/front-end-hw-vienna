@@ -13,7 +13,7 @@
   </head>
   <body class="bg-dark">
     <main class="row justify-content-center">
-      <form id="userForm" class="bg-light mt-5 w-75 p-3">
+      <form id="userForm" class="bg-light mt-5 w-75 p-3" style="max-width: max-content;">
         <h1>Exercise 05 - Form</h1>
         <label for="name" class="fw-bold">Full Name:</label> <br />
         <input type="text" id="name" class="w-100" />
@@ -47,7 +47,7 @@
           </div>
         </fieldset>
         <label for="also" class="fw-bold">Anything else?</label> <br />
-        <input type="text" id="also" class="w-100 h-auto" />
+        <textarea id="also" class="w-100" rows="3"></textarea>
         <input
           type="submit"
           id="submitButton"
