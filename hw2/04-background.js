@@ -4,9 +4,9 @@ const button = document.getElementById("start-stop");
 const message_element = document.getElementById("message");
 let interval_id;
 
-//The current button state
-// either a start button(true) or stop button(false)
-// should only be set by changeButtonState
+/* The current button state
+   either a start button(true) or stop button(false)
+   should only be set by changeButtonState */
 let is_button_start_state = true;
 
 //Toggle the button state, change it's color and text to match
@@ -21,8 +21,8 @@ const changeButtonState = () => {
   }
 };
 
-//Generate a random color, with a reduced maximum alpha value to
-// prevent too harsh of colors
+/* Generate a random color, with a reduced maximum alpha value to
+   prevent too harsh of colors */
 const randomColor = () => {
   const r = Math.round(Math.random() * 255);
   const b = Math.round(Math.random() * 255);
