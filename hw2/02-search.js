@@ -21,7 +21,6 @@ const clearChildren = (elem) => {
   elem.replaceChildren();
 };
 
-
 /* Find all characters whose name includes the given string
    return a list of the names and birth years of the found characters */
 const findCharacters = (to_match) => {
@@ -52,12 +51,15 @@ const createCard = (character) => {
 };
 
 // Highlight search term in given card's name
-const highlightSearchTerm = (term, card)  => {
+const highlightSearchTerm = (term, card) => {
   console.log(card.firstChild);
   let name_element = card.querySelector(".name");
   const name = name_element.textContent;
   const regex_term = new RegExp(`(${term})`, "ig");
-  name_element.innerHTML = name.replace(regex_term, "<mark class='p-0' style='background-color: yellow;'>$1</mark>");
-}
+  name_element.innerHTML = name.replace(
+    regex_term,
+    "<mark class='p-0' style='background-color: yellow;'>$1</mark>"
+  );
+};
 
 document.getElementById("searchBtn").addEventListener("click", handleClick);

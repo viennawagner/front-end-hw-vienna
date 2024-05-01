@@ -12,8 +12,7 @@ const handleKeyUp = () => {
     .value.trim()
     .toLowerCase();
   const search_element = document.getElementById("toSearch");
-  const search_arr = search_element.textContent
-    .split(RegExp("\\b"));
+  const search_arr = search_element.textContent.split(RegExp("\\b"));
 
   search_element.innerHTML = search_arr
     .map((word) => replaceWithHighlightHTML(word, input_value))
