@@ -24,10 +24,10 @@ const changeButtonState = () => {
 /* Generate a random color, with a reduced maximum alpha value to
    prevent too harsh of colors */
 const randomColor = () => {
-  const r = Math.round(Math.random() * 255);
-  const b = Math.round(Math.random() * 255);
-  const g = Math.round(Math.random() * 255);
-  const a = Math.round(Math.random() * 30) + 50;
+  const r = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const a = Math.floor(Math.random() * 30) + 50;
 
   return "#" + r.toString(16) + b.toString(16) + g.toString(16) + a.toString();
 };
