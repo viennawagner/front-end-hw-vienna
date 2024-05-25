@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import "../style.css";
 
 //Body of the page
@@ -16,7 +15,6 @@ const Body = () => {
 export default function Home() {
   return (
     <div className="bg">
-      <Navbar />
       <Body />
     </div>
   )
