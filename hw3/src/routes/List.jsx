@@ -2,7 +2,7 @@ import React from "react";
 import "../style.css";
 
 //Card containing country info
-const Card = (country) => {
+const Card = ({country}) => {
   //Generic not found response for if the API is missing any data
   const not_found = "Data not found";
   return(
@@ -17,9 +17,9 @@ const Card = (country) => {
 }
 
 //All country cards
-const Countries = (countries) => {
+const Countries = ({countries}) => {
   return (
-    countries.map((country) => {
+    countries.map(({country}) => {
         <>
         <Card key={country.id} country={country} />
         </>
