@@ -7,14 +7,93 @@
     <title>05 - Form</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
     <script defer src="05-form.js"></script>
   </head>
-  <body>
-    <main>
-      <form>
+  <body class="bg-dark">
+    <main class="row justify-content-center">
+      <form id="userForm" class="bg-light mt-5 w-75 p-3" style="max-width: max-content;">
         <h1>Exercise 05 - Form</h1>
+        <label for="name" class="fw-bold">Full Name:</label> <br />
+        <input type="text" id="name" class="w-100" />
+        <label for="email" class="fw-bold">Email:</label> <br />
+        <input type="email" id="email" class="w-100" />
+        <label for="regStatus" class="fw-bold">Registration Status:</label>
+        <br />
+        <select name="regStatus" id="regStatus" class="w-100">
+          <option value="" class="fw-bold">Choose an Option</option>
+          <option value="Registered">Registered</option>
+          <option value="Pending">Pending</option>
+          <option value="Waitlisted">Waitlisted</option>
+          <option value="Not Registered">Not Registered</option>
+          <option value="Other">Other</option>
+        </select>
+        <fieldset>
+          <legend class="fw-bold">
+            Have you taken any of the following courses?
+          </legend>
+          <div>
+            <input type="checkbox" id="progLangs" name="progLangs" class="listedClass" value="Programming Languages"/>
+            <label for="progLangs">Programming Languages</label>
+          </div>
+          <div>
+            <input type="checkbox" id="os" name="os" class="listedClass" value="Operating Systems"/>
+            <label for="os">Operating Systems</label>
+          </div>
+          <div>
+            <input type="checkbox" id="fullstack" name="fullstack" class="listedClass" value="Full Stack Web Development"/>
+            <label for="fullstack">Full Stack Web Development</label>
+          </div>
+        </fieldset>
+        <label for="also" class="fw-bold">Anything else?</label> <br />
+        <textarea id="also" class="w-100" rows="3"></textarea>
+        <input
+          type="submit"
+          id="submitButton"
+          value="Submit"
+          data-bs-toggle="modal"
+          data-bs-target="#responseModal"
+          class="btn btn-primary col-5 m-2"
+        />
+        <input type="reset" class="btn btn-secondary col-5 m-2" value="Reset" />
+
+        <div
+          class="modal fade"
+          role="dialog"
+          id="responseModal"
+          aria-labelledby="modalLabel"
+          aria-hidden="true"
+          data-bs-backdrop="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title" id="modalLabel">Your responses</h5>
+                <button
+                  type="button"
+                  class="btn btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <h3>Name:</h3>
+                <p class="nameResponseArea"></p>
+                <h3>Email:</h3>
+                <p class="emailResponseArea"></p>
+                <h3>Registartion status:</h3>
+                <p class="statusResponseArea"></p>
+                <h3>Previous classes:</h3>
+                <p class="classResponseArea" style="white-space: pre-wrap;"></p>
+                <h3>Anything else?</h3>
+                <p class="alsoResponseArea"></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
